@@ -8,13 +8,8 @@ attr_accessor :name, :breed, :age
     self.name = name
     self.breed = breed
     self.age = age
-    save
+    self.class.all << self
   end
-
-  def save
-    @@all << self
-  end
-
   def self.all
     @@all
   end

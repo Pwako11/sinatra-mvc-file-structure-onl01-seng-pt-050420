@@ -1,5 +1,5 @@
 class Dog < Sinatra::Base
-
+require 'pry'
 attr_accessor :name, :breed, :age
 
 @@all = []

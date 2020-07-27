@@ -1,4 +1,4 @@
-class Dog < Sinatra::Base
+class Dog
 require 'pry'
 attr_accessor :name, :breed, :age
 
@@ -9,6 +9,7 @@ attr_accessor :name, :breed, :age
     @breed = breed
     @age = age
     save
+    binding.pry
   end
 
   def save

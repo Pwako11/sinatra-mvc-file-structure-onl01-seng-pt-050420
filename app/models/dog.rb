@@ -5,11 +5,16 @@ class Dog < Sinatra::Base
 attr_accessor :name, :breed, :age
 
   def initialize (name, breed, age)
-    self.name = name
-    self.breed = breed
-    self.age = age
-    self.class.all << self
+    @name = name
+    @breed = breed
+    @age = age
+    save
   end
+
+  def save
+    @@all << self
+  end 
+  
   def self.all
     @@all
   end

@@ -5,6 +5,6 @@ class Dog < Sinatra::Base
   def initialize (name, breed, age)
     @name, @breed, @age = name, breed, age
 
-  end 
+  end
 
 end
